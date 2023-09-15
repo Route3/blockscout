@@ -74,6 +74,13 @@ config :explorer, Explorer.Repo.Account,
   url: ExplorerConfigHelper.get_account_db_url(),
   pool_size: ConfigHelper.parse_integer_env_var("ACCOUNT_POOL_SIZE", 10)
 
+# Configure PolygonZkevm database
+config :explorer, Explorer.Repo.PolygonZkevm,
+  database: database,
+  hostname: hostname,
+  url: System.get_env("DATABASE_URL"),
+  pool_size: ConfigHelper.parse_integer_env_var("POLYGON_ZKEVM_POOL_SIZE", 10)
+
 variant = Variant.get()
 
 Code.require_file("#{variant}.exs", "apps/explorer/config/dev")

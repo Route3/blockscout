@@ -8,22 +8,30 @@ defmodule Explorer.Chain.Import.Stage.BlockReferencing do
   alias Explorer.Chain.Import.{Runner, Stage}
 
   @behaviour Stage
+  @default_runners [
+    Runner.Transactions,
+    Runner.Transaction.Forks,
+    Runner.Logs,
+    Runner.Tokens,
+    Runner.TokenTransfers,
+    Runner.Address.TokenBalances,
+    Runner.TransactionActions,
+    Runner.Withdrawals
+  ]
 
   @impl Stage
-  def runners,
-    do: [
-      Runner.Transactions,
-      Runner.Transaction.Forks,
-      Runner.Logs,
-      Runner.Tokens,
-      Runner.TokenTransfers,
-      Runner.Address.TokenBalances,
-      Runner.TransactionActions,
-      Runner.Withdrawals,
-      Runner.Zkevm.LifecycleTransactions,
-      Runner.Zkevm.TransactionBatches,
-      Runner.Zkevm.BatchTransactions
-    ]
+  def runners do
+    if System.get_env("CHAIN_TYPE") == "polygon_zkevm" do
+      @default_runners ++
+        [
+          Runner.Zkevm.LifecycleTransactions,
+          Runner.Zkevm.TransactionBatches,
+          Runner.Zkevm.BatchTransactions
+        ]
+    else
+      @default_runners
+    end
+  end
 
   @impl Stage
   def multis(runner_to_changes_list, options) do
