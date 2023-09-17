@@ -4,6 +4,7 @@
 
 ### Features
 
+- [#8472](https://github.com/blockscout/blockscout/pull/8472) - Integrate `/api/v2/bytecodes/sources:search-all` of `eth_bytecode_db`
 - [#8382](https://github.com/blockscout/blockscout/pull/8382) - Add sitemap.xml
 - [#8313](https://github.com/blockscout/blockscout/pull/8313) - Add batches to TokenInstance fetchers
 - [#8285](https://github.com/blockscout/blockscout/pull/8285), [#8399](https://github.com/blockscout/blockscout/pull/8399) - Add CG/CMC coin price sources

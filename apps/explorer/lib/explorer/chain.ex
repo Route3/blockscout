@@ -3941,6 +3941,17 @@ defmodule Explorer.Chain do
     if result, do: !result.partially_verified, else: false
   end
 
+  def select_partially_verified_by_address_hash(address_hash, options \\ []) do
+    query =
+      from(
+        smart_contract in SmartContract,
+        where: smart_contract.address_hash == ^address_hash,
+        select: smart_contract.partially_verified
+      )
+
+    select_repo(options).one(query)
+  end
+
   def smart_contract_verified?(address_hash_str) when is_binary(address_hash_str) do
     case string_to_address_hash(address_hash_str) do
       {:ok, address_hash} ->
