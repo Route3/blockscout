@@ -1,0 +1,213 @@
+// general
+$primary: #f18cd4;
+$secondary: #09bc3b;
+// $tertiary: #bf9cff;
+$additional-font: #000000;
+$title-color: #545861;
+
+// Logo Size
+$navbar-logo-height: 34px;
+
+// dashboard
+$dashboard-line-color-price: $tertiary; // price left border
+
+$dashboard-banner-chart-legend-label-color: #000000;
+$dashboard-stats-item-label-color: $title-color;
+$dashboard-banner-chart-legend-value-color: #000000; // chart labels
+$dashboard-stats-item-value-color: #000000; // stat values
+
+// $dashboard-banner-gradient-end: lighten($primary, 5); // gradient end
+
+$dashboard-banner-network-plain-container-background-color: "transparent"; // #8258cd; // stats bg
+.dashboard-banner-network-stats-item::before {
+  background-color: transparent !important;
+}
+// navigation
+// .navbar {
+// box-shadow: 0px 0px 30px 0px rgba(21, 53, 80, 0.12);
+// } // header shadow
+$dropdown-menu-item-hover-color: $primary !default;
+$dropdown-menu-item-hover-background: rgba($primary, 0.1) !default;
+$header-icon-color-hover: $primary;
+$header-icon-border-color-hover: $primary;
+
+// buttons
+$btn-line-bg: #fff; // button bg
+$btn-line-color: #000000; // button border and font color && hover bg color
+$btn-copy-color: $primary; // btn copy
+$btn-qr-color: $primary; // btn qr-code
+$btn-address-card-icon-color: $primary; // btn address color
+.btn-line {
+  border-radius: 4px !important;
+}
+
+//links & tile
+$tile-body-a-color: $primary;
+$tile-type-block-color: $primary;
+$tile-type-progress-bar-color: $primary;
+.tile {
+  line-height: 116% !important;
+  letter-spacing: 0.08px !important;
+}
+
+.tile-transaction-type-row {
+  padding-top: 18px !important;
+}
+
+.tile-transaction-type-block {
+  background-color: transparent;
+  margin-top: -26px !important;
+  margin-left: 7px !important;
+  @media (min-width: 768px) {
+    margin-top: -26px;
+    margin-bottom: 8px;
+    margin-left: 7px;
+  }
+}
+
+.tile.tile-type-contract-creation {
+  border-left: 1px solid #e7e9eb !important;
+  background-color: #eff0f1 !important;
+}
+
+.tile.tile-type-block .tile-title {
+  color: $title-color !important;
+  font-size: 16px !important;
+}
+
+.tile.tile-type-block {
+  background-color: #eff0f1 !important;
+  border: 1px solid #e7e9eb !important;
+  border-radius: 8px;
+}
+
+.tile-label {
+  font-size: 16px !important;
+}
+.tile-status-label {
+  font-size: 16px !important;
+}
+
+.tile-body {
+  font-size: 13.33px !important;
+  font-weight: 400 !important;
+  @media (min-width: 768px) {
+    flex-wrap: nowrap !important;
+  }
+}
+
+.tile-bottom-contents {
+  background-color: #eff0f1 !important;
+}
+
+.tile-transactions {
+  color: #545861 !important;
+  font-size: 13.33px !important;
+  line-height: 130% !important;
+  letter-spacing: 0.4px !important;
+}
+
+// card
+$card-background-1: $primary;
+$card-tab-active: $primary;
+
+.card {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  border: 1px solid #e7e9eb;
+  margin-bottom: 50px;
+}
+
+.card-title {
+  font-size: 23.04px !important;
+  font-weight: 700 !important;
+  line-height: 130% !important;
+  letter-spacing: 0.115px !important;
+}
+
+.layout-container {
+  background: linear-gradient(
+      308deg,
+      rgba($secondary, 0.75) -23.71%,
+      rgba(255, 255, 255, 0) 65.15%
+    ),
+    #fff;
+  .dashboard-banner-network-container {
+    padding-left: 72px;
+    // padding-top: 42px;
+    // align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .dashboard-banner-network-stats {
+    align-items: start;
+    @media (min-width: 1200px) {
+      padding-bottom: 73px;
+      padding-left: 24px;
+    }
+    @media (min-width: 990px) {
+      padding-bottom: 20px;
+      padding-left: 12px;
+    }
+  }
+}
+
+// Badges
+$badge-neutral-color: $primary;
+$badge-neutral-background-color: rgba($primary, 0.1) -13.71%;
+$api-text-monospace-color: $primary;
+
+// Tokens dropdown
+.token-balance-dropdown[aria-labelledby="dropdown-tokens"] {
+  .dropdown-items .dropdown-item:hover {
+    color: $primary !important;
+  }
+}
+
+// Dark theme
+$dark-primary: #f18cd4;
+$dark-secondary: #09bc3b;
+$dark-primary-alternate: #f18cd4;
+
+//Btn
+.btn-line {
+  border: 2px solid $additional-font !important;
+  padding: 0px 16px !important;
+  font-size: 13.33px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.4px !important;
+}
+
+.blocks-divider {
+  border-color: #e7e9eb;
+  margin: 0 !important;
+  width: 100%;
+}
+
+.input-group:focus,
+.input-group:focus {
+  outline: none !important;
+}
+
+.form-control {
+  padding-top: 2px !important;
+}
+
+.navbar.navbar-primary .form-control {
+  background-color: #fff !important;
+  border-color: #c1c6cb !important;
+  border-radius: 8px !important;
+}
+
+.card-divider {
+  margin-top: -10px !important;
+  margin-left: -20px !important;
+  margin-bottom: 23px !important;
+  width: 103.2%;
+}
+
+.dashboard-banner-chart {
+  margin: 0 -40px 0 -25px !important;
+}

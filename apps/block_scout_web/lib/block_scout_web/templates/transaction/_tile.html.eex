@@ -39,12 +39,12 @@
         <%= render BlockScoutWeb.AddressView, "_labels.html", tags: tx_tags %>
       </div>
       </span>
-      <span>
+      <span class="tile-transaction-type-row">
         <%= @transaction |> BlockScoutWeb.AddressView.address_partial_selector(:from, assigns[:current_address]) |> BlockScoutWeb.RenderHelper.render_partial() %>
         &rarr;
         <%= @transaction |> BlockScoutWeb.AddressView.address_partial_selector(:to, assigns[:current_address]) |> BlockScoutWeb.RenderHelper.render_partial() %>
       </span>
-      <span class="d-flex flex-md-row flex-column mt-3 mt-md-0">
+      <span class="d-flex flex-md-row flex-column mt-3 mt-md-0 tile-transaction-type-row">
         <span class="tile-title">
           <%= value(@transaction, include_label: false) %> <%= Explorer.coin_name() %>
         </span>
@@ -76,7 +76,7 @@
       <% end %>
     </div>
     <!-- Block info -->
-    <div class="col-md-3 col-lg-2 d-flex flex-row flex-md-column flex-nowrap justify-content-center text-md-right mt-3 mt-md-0 tile-bottom">
+    <div class="col-md-3 col-lg-2 d-flex flex-row flex-md-column flex-nowrap text-md-right mt-3 mt-md-0 tile-bottom">
       <span class="mr-2 mr-md-0 order-1">
         <%= @transaction |> block_number() |> BlockScoutWeb.RenderHelper.render_partial() %>
       </span>

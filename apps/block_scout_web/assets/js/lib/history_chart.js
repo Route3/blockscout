@@ -50,6 +50,13 @@ function getMarketCapChartColor () {
     return sassVariables.dashboardLineColorMarket
   }
 }
+function getFontColor () {
+  if ((isDarkMode())) {
+    return sassVariables.dashboardBannerChartAxisFontColorDarkTheme
+  } else {
+    return sassVariables.dashboardBannerChartAxisFontColor
+  }
+}
 
 function xAxe (fontColor) {
   return {
@@ -86,6 +93,13 @@ const config = {
     datasets: []
   },
   options: {
+    bezierCurve: false,
+    elements: {
+      line: {
+        tension: 0,
+        borderJoinStyle: 'miter'
+      }
+    },
     layout: {
       padding
     },
@@ -94,7 +108,7 @@ const config = {
       mode: 'index'
     },
     scales: {
-      x: xAxe(sassVariables.dashboardBannerChartAxisFontColor),
+      x: xAxe(getFontColor()),
       price: {
         position: 'left',
         grid,
@@ -102,7 +116,7 @@ const config = {
           beginAtZero: true,
           callback: (value, _index, _values) => `$${numeral(value).format('0,0.00')}`,
           maxTicksLimit: 4,
-          color: sassVariables.dashboardBannerChartAxisFontColor
+          color: getFontColor()
         }
       },
       marketCap: {
@@ -112,7 +126,7 @@ const config = {
           callback: (_value, _index, _values) => '',
           maxTicksLimit: 6,
           drawOnChartArea: false,
-          color: sassVariables.dashboardBannerChartAxisFontColor
+          color: getFontColor()
         }
       },
       numTransactions: {
@@ -122,7 +136,7 @@ const config = {
           beginAtZero: true,
           callback: (value, _index, _values) => formatValue(value),
           maxTicksLimit: 4,
-          color: sassVariables.dashboardBannerChartAxisFontColor
+          color: getFontColor()
         }
       }
     },
@@ -130,7 +144,7 @@ const config = {
       legend,
       title: {
         display: true,
-        color: sassVariables.dashboardBannerChartAxisFontColor
+        color: getFontColor()
       },
       tooltip: {
         mode: 'index',
@@ -217,8 +231,8 @@ class MarketHistoryChart {
       yAxisID: 'price',
       data: [],
       fill: false,
-      cubicInterpolationMode: 'monotone',
-      pointRadius: 0,
+      cubicInterpolationMode: 'default',
+      pointRadius: 1,
       backgroundColor: priceLineColor,
       borderColor: priceLineColor
       // lineTension: 0
@@ -235,8 +249,8 @@ class MarketHistoryChart {
       yAxisID: 'marketCap',
       data: [],
       fill: false,
-      cubicInterpolationMode: 'monotone',
-      pointRadius: 0,
+      cubicInterpolationMode: 'default',
+      pointRadius: 1,
       backgroundColor: mcapLineColor,
       borderColor: mcapLineColor
       // lineTension: 0
@@ -254,9 +268,9 @@ class MarketHistoryChart {
       label: window.localized['Tx/day'],
       yAxisID: 'numTransactions',
       data: [],
-      cubicInterpolationMode: 'monotone',
+      cubicInterpolationMode: 'default',
       fill: false,
-      pointRadius: 0,
+      pointRadius: 1,
       backgroundColor: getTxChartColor(),
       borderColor: getTxChartColor()
       // lineTension: 0
@@ -269,7 +283,7 @@ class MarketHistoryChart {
       axes.numTransactions.position = 'left'
     }
 
-    const txChartTitle = 'Daily transactions'
+    const txChartTitle = ''
     const marketChartTitle = 'Daily price and market cap'
     let chartTitle = ''
     if (Object.keys(dataConfig).join() === 'transactions') {

@@ -1,8 +1,8 @@
-<div class="dashboard-banner-chart-legend-item gas-price-oracle">
-    <span class="dashboard-banner-chart-legend-label">
+<div class="dashboard-banner-network-stats-item dashboard-banner-network-stats-item-1">
+    <span class="dashboard-banner-network-stats-label">
     <%= gettext "Gas tracker" %>
     </span>
-    <div class="dashboard-banner-chart-legend-value-container">
+    <div class="dashboard-banner-network-stats-value">
         <% gas_prices_from_oracle = gas_prices() %>
         <%= if gas_prices_from_oracle do %>
         <span class="dashboard-banner-chart-legend-value inline">
