@@ -23,13 +23,38 @@ $dashboard-banner-network-plain-container-background-color: "transparent"; // #8
   background-color: transparent !important;
 }
 // navigation
-// .navbar {
-// box-shadow: 0px 0px 30px 0px rgba(21, 53, 80, 0.12);
-// } // header shadow
 $dropdown-menu-item-hover-color: $primary !default;
 $dropdown-menu-item-hover-background: rgba($primary, 0.1) !default;
 $header-icon-color-hover: $primary;
 $header-icon-border-color-hover: $primary;
+
+.navbar-container,
+.navbar-primary {
+  margin-top: 0 !important;
+  // margin-left: 5% !important;
+}
+.navbar-home-dark {
+  height: 24px;
+  width: 24px;
+}
+
+.route3-testnet-container {
+  align-items: center;
+  background-color: #fd6c2e;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 22px;
+  padding: 12px;
+  width: 100%;
+
+  font-size: 13.33px;
+  line-height: 130%;
+  letter-spacing: 0.4px;
+}
+.underline-text {
+  text-decoration: underline;
+}
 
 // buttons
 $btn-line-bg: #fff; // button bg
