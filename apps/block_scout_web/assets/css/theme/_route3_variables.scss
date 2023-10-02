@@ -1,6 +1,6 @@
 // general
-$primary: #f18cd4;
-$secondary: #09bc3b;
+$primary: #15beab;
+$secondary: #fd6c2e;
 // $tertiary: #bf9cff;
 $additional-font: #000000;
 $title-color: #545861;
@@ -192,9 +192,9 @@ $api-text-monospace-color: $primary;
 }
 
 // Dark theme
-$dark-primary: #f18cd4;
-$dark-secondary: #09bc3b;
-$dark-primary-alternate: #f18cd4;
+$dark-primary: $primary;
+$dark-secondary: $secondary;
+$dark-primary-alternate: $primary;
 
 //Btn
 .btn-line {
