@@ -41,6 +41,7 @@ $header-icon-border-color-hover: $primary;
 .route3-testnet-container {
   align-items: center;
   background-color: #fd6c2e;
+  color: #000 !important;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -51,9 +52,11 @@ $header-icon-border-color-hover: $primary;
   font-size: 13.33px;
   line-height: 130%;
   letter-spacing: 0.4px;
-}
-.underline-text {
-  text-decoration: underline;
+
+  .underline-text {
+    color: #000 !important;
+    text-decoration: underline;
+  }
 }
 
 // buttons
