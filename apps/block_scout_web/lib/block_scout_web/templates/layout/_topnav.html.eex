@@ -187,7 +187,7 @@
         </li>
          -->
         <!-- Dark mode changer -->
-  <!--
+<!--
         <%= unless Application.get_env(:block_scout_web, :permanent_light_mode_enabled) || Application.get_env(:block_scout_web, :permanent_dark_mode_enabled) do %>
           <button class="dark-mode-changer" id="dark-mode-changer">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
@@ -197,7 +197,7 @@
         <% end %>
         <%= render BlockScoutWeb.LayoutView, "_account_menu_item.html", conn: @conn, current_user: @current_user %>
       </ul>
--->
+ -->
       <%= render BlockScoutWeb.LayoutView, "_search.html", conn: @conn, id: "main-search-autocomplete", additional_classes: ["mobile-search-hide"] %>
     </div>
   </div>

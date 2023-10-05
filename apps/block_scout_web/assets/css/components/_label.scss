@@ -1,7 +1,7 @@
 .bs-label {
   display: inline-block;
   padding: 0 5px;
-  background: #f5f6fa;
+  background: #e4e6e8;
   color: #77838f;
   border-radius: 5px;
   &.large {
@@ -70,9 +70,9 @@
   left: 0;
   top: 0;
   content: "";
-  border-top: 0.9rem solid transparent;
-  border-bottom: 0.9rem solid transparent;
-  border-left: 0.9rem solid #fff;
+  border-top: 0.85rem solid transparent;
+  border-bottom: 0.8rem solid transparent;
+  border-left: 0.9rem solid #f8f8f8;
 }
 
 .index-label {
@@ -82,7 +82,7 @@
   border-bottom-left-radius: 0.25rem;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  background: #f5f6fa;
+  background: #e4e6e8;
   color: #77838f;
   padding: 0.2rem 0.5rem;
 }
@@ -92,9 +92,9 @@
   left: 100%;
   top: 0;
   content: "";
-  border-top: 0.8rem solid transparent;
-  border-bottom: 0.8rem solid transparent;
-  border-left: 0.8rem solid rgba(245, 246, 250, 1);
+  border-top: 0.7rem solid transparent;
+  border-bottom: 0.65rem solid transparent;
+  border-left: 0.8rem solid #e4e6e8;
 }
 
 .testnet-label {

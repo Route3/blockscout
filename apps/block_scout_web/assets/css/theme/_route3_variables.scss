@@ -28,6 +28,9 @@ $dropdown-menu-item-hover-background: rgba($primary, 0.1) !default;
 $header-icon-color-hover: $primary;
 $header-icon-border-color-hover: $primary;
 
+.navbar {
+  padding-left: 55px !important;
+}
 .navbar-container,
 .navbar-primary {
   margin-top: 0 !important;
@@ -160,6 +163,7 @@ $card-tab-active: $primary;
       rgba(255, 255, 255, 0) 65.15%
     ),
     #fff;
+  overflow: hidden;
   .dashboard-banner-network-container {
     padding-left: 72px;
     // padding-top: 42px;
@@ -208,6 +212,13 @@ $dark-primary-alternate: $primary;
   letter-spacing: 0.4px !important;
 }
 
+.btn-line:hover {
+  background-color: #f8f8f8 !important;
+  border-color: #545861 !important;
+  color: #545861 !important;
+  text-decoration: none;
+}
+
 .blocks-divider {
   border-color: #e7e9eb;
   margin: 0 !important;
@@ -238,4 +249,50 @@ $dark-primary-alternate: $primary;
 
 .dashboard-banner-chart {
   margin: 0 -40px 0 -25px !important;
+}
+
+#qrModal {
+  background-color: rgba($primary, 0.75) !important;
+  .modal-content {
+    .btn-primary {
+      background-color: $primary !important;
+      border-color: $primary !important;
+      &:focus,
+      &:hover {
+        background-color: $primary !important;
+        border-color: $primary !important;
+      }
+    }
+  }
+}
+
+.space-bottom {
+  padding-bottom: 5px;
+}
+
+.page-link {
+  font-weight: 400 !important;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center !important;
+}
+
+// .confirmations-label:after {
+//   border-top: 0.85rem solid transparent !important;
+//   border-bottom: 0.8rem solid transparent !important;
+//   border-left: 0.9rem solid #f8f8f8 !important;
+// }
+
+// .bs-label {
+//   background: #e4e6e8 !important;
+// }
+
+// .bs-label.success {
+//   background: rgba(40, 167, 69, 0.2) !important;
+// }
+
+input.main-search-autocomplete::placeholder {
+  color: #545861;
 }

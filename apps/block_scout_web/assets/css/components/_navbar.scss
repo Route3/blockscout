@@ -110,7 +110,7 @@ $header-logo-text-color: #333 !default;
   }
   .search-form {
     display: flex;
-
+    width: 580px;
     @include media-breakpoint-up(xl) {
       height: 47px;
       margin-bottom: -8px;

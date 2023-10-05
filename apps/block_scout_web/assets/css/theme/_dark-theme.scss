@@ -9,6 +9,7 @@ $dark-light-bg: #1b1e21; // pills bg shade
 $dark-light: #1b1e21; // tile light top share
 $labels-dark: #c1c6cb; // header nav, labels
 $dark-border: #2a2d30; // hero shade
+
 $dark-stakes-banned-background: #3e314c;
 $dashboard-banner-network-stats-item-before-background-color-dark-mode: $dark-secondary !default;
 $header-links-background-color-dark-mode: $dark-light !default;
@@ -284,13 +285,13 @@ $header-links-background-color-dark-mode: $dark-light !default;
   // btns
 
   .btn-line {
-    background-color: transparent;
+    background-color: transparent !important;
     border-color: #fff !important;
     color: #fff;
     &:hover {
-      border-color: #fff;
-      background-color: #fff;
-      color: #fff;
+      border-color: #c1c6cb !important;
+      background-color: transparent !important;
+      color: #c1c6cb !important;
     }
   }
 
@@ -1164,7 +1165,7 @@ $header-links-background-color-dark-mode: $dark-light !default;
 }
 .dark-theme-applied .navbar.navbar-primary .form-control {
   background-color: #000 !important;
-  border-color: $dark-border !important;
+  border-color: #545861 !important;
 }
 .dark-theme-applied .navbar.navbar-primary {
   background-color: transparent !important;
@@ -1205,7 +1206,7 @@ $header-links-background-color-dark-mode: $dark-light !default;
   }
 }
 .dark-theme-applied .confirmations-label:after {
-  border-left: 0.9rem solid $dark-light-bg;
+  border-left: 0.85rem solid $dark-bg !important;
 }
 
 .dark-theme-applied .i-tooltip-2:hover {
@@ -1219,4 +1220,8 @@ $header-links-background-color-dark-mode: $dark-light !default;
 
 .navbar-home-dark {
   fill: #000;
+}
+
+input.main-search-autocomplete::placeholder {
+  color: #c1c6cb !important ;
 }

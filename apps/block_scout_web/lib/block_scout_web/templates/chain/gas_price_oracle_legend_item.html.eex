@@ -5,9 +5,9 @@
     <div class="dashboard-banner-network-stats-value">
         <% gas_prices_from_oracle = gas_prices() %>
         <%= if gas_prices_from_oracle do %>
-        <span class="dashboard-banner-chart-legend-value inline">
+        <span class="dashboard-banner-network-stats-value inline">
             <div>
-            <div class="d-flex flex-row" style="height: 20px; line-height: 20px;">
+            <div class="d-flex flex-row">
                 <div class="flex-column"><%= "#{gas_prices_from_oracle["average"]}" <> " " %><%= gettext "Gwei" %></div>
                 <span
                 data-toggle="tooltip"

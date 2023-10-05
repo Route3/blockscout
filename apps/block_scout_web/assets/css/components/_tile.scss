@@ -55,6 +55,22 @@ $tile-body-a-color: #5959d8 !default;
 }
 
 /*********************************************************************/
+.tile-container {
+  display: flex;
+  justify-content: space-between;
+  height: 53px;
+  .tile-container-grow {
+    display: flex;
+    flex: 1;
+  }
+  .tile-container-small {
+    justify-content: space-between !important;
+  }
+}
+
+.tile-row {
+  padding: 8px 0;
+}
 
 .tile-label {
   font-size: 12px;
