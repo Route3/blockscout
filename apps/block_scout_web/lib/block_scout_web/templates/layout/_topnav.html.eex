@@ -2,7 +2,7 @@
 <% other_nets = dropdown_other_nets() %>
 <% test_nets = test_nets(dropdown_nets()) %>
 <% main_nets = dropdown_head_main_nets() %>
-<div class="route3-testnet-container">This is a &nbsp<a href="https://route3.co" target="_blank" class="underline-text">Route3</a> &nbsp testnet</div>
+<div class="route3-testnet-container">This is an &nbsp<a href="https://apexfusion.org" target="_blank" class="underline-text">Apex Fusion</a> &nbsp Nexus Testnet</div>
 <nav class="navbar navbar-dark navbar-expand-lg navbar-primary" data-selector="navbar" id="top-navbar">
   <div class="container-fluid navbar-container">
     <%= link to: webapp_url(@conn), class: "navbar-brand", "data-test": "header_logo" do %>
